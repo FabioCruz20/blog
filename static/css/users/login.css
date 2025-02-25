@@ -1,0 +1,9 @@
+.grid-center {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.form {
+    width: 300px;
+}

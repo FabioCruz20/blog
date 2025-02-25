@@ -1,13 +1,21 @@
 {% extends 'layout.html' %}
+{% load static %}
 
 {% block title %}
-    Login
+  Login
+{% endblock %}
+
+{% block css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/users/login.css' %}">
 {% endblock %}
 
 {% block content %}
-    <form method="post" action="{% url 'login' %}">
-        {% csrf_token %}
-        {{ form }}
-        <button>Login</button>
+  <section class="grid-center bg-neutral-1 text-1">
+    <form method="post" action="{% url 'login' %}" class="form">
+      {% csrf_token %}
+      {{ form }}
+      <button class="btn bg-primary text-1 block full-width">Login</button>
     </form>
+  </section>
 {% endblock %}
