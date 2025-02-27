@@ -18,3 +18,13 @@
         width: 540px;
     }
 }
+
+.forgot-password {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}

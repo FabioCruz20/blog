@@ -20,6 +20,7 @@
         <input type="hidden" name="next" value="{{ request.GET.next }}">
         <button class="btn-main block full-width">Login</button>
       </form>
+      <a href="{% url 'password_reset' %}" class="forgot-password text-primary">I forgot my password</a>
     </div>
   </section>
 {% endblock %}

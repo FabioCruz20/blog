@@ -31,6 +31,10 @@ a {
     background-color: var(--neutral-1);
 }
 
+.text-primary {
+    color: var(--primary);
+}
+
 .text-1 {
     color: var(--text-1);
 }
