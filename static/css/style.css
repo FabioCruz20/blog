@@ -17,6 +17,7 @@ body {
 
 a {
     text-decoration: none;
+    color: var(--text-1);
 }
 
 .bg-primary {
@@ -54,10 +55,19 @@ label {
     margin-top: 10px;
 }
 
-input {
+input, 
+textarea {
     padding: 8px 10px;
     margin-bottom: 10px;
     width: 100%;
+}
+
+input::file-selector-button {
+    border: none;
+    background: var(--primary);
+    color: var(--text-1);
+    cursor: pointer;
+    padding: 10px 20px;
 }
 
 .block {
@@ -68,8 +78,13 @@ input {
     width: 100%;
 }
 
+.full-height {
+    height: 100vh;
+}
+
 .container {
-    padding: 8px 16px;
+    padding: 8px 16px;    
+    margin: 0 auto;
 }
 
 @media (min-width: 576px) {
@@ -100,4 +115,14 @@ input {
     .container {
         max-width: 1320px;
     }
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.header-nav a {
+    color: var(--text-1);
 }

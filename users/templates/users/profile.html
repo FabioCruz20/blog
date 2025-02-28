@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block css %}
+    {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <main class="bg-neutral-1 text-1 full-height">
+        <div class="container">
+            <h1>User profile</h1>
+            <form action="" enctype="multipart/form-data" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <button class="btn-main block full-width">Save</button>
+            </form>
+        </div>
+    </main>
+{% endblock %}
