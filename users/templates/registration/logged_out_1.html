@@ -1,0 +1,25 @@
+{% extends 'layout_login.html' %}
+{% load static %}
+
+{% block title %}
+  Password Reset
+{% endblock %}
+
+{% block css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/users/login.css' %}">
+{% endblock %}
+
+{% block content %}
+  <section class="grid-center bg-neutral-1 text-1">
+    <div class="form">
+      <h1 class="margin-bottom">Logged out</h1>
+      <p class="margin-bottom">
+        Thanks for spending some quality time with the web site today.
+      </p>
+      <p>
+        <a href="{% url 'login' %}" class="text-primary">Log in again</a>
+      </p>
+    </div>
+  </section>
+{% endblock %}

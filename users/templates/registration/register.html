@@ -1,0 +1,25 @@
+{% extends 'layout_login.html' %}
+{% load static %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/users/login.css' %}">
+{% endblock %}
+
+{% block content %}
+  <section class="grid-center bg-neutral-1 text-1">
+    <div class="container">
+      <h1 class="title">Register</h1>
+      <form method="post" action="{% url 'register' %}" class="form">
+        {% csrf_token %}
+        {{ form }}
+        <input type="hidden" name="next" value="{{ request.GET.next }}"/>
+        <button class="btn-main full-width">Register</button>
+      </form>
+    </div>
+  </section>
+{% endblock %}
