@@ -1,8 +1,15 @@
 :root {
+
+    color-scheme: light dark;
+
     --primary: #CC7744;
     --secondary: #655246;
-    --neutral-1: #272320;
-    --text-1: #fafafa;
+
+    --neutral-1-dark: #272320;
+    --text-1-dark: #fafafa;
+
+    --neutral-1-light: #ebebeb;
+    --text-1-light: #252525;
 }
 
 * {
@@ -17,7 +24,7 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--text-1);
+    color: light-dark(var(--text-1-light), var(--text-1-dark));
 }
 
 .bg-primary {
@@ -29,7 +36,7 @@ a {
 }
 
 .bg-neutral-1 {
-    background-color: var(--neutral-1);
+    background-color: light-dark(var(--neutral-1-light), var(--neutral-1-dark));
 }
 
 .text-primary {
@@ -37,7 +44,7 @@ a {
 }
 
 .text-1 {
-    color: var(--text-1);
+    color: light-dark(var(--text-1-light), var(--text-1-dark));
 }
 
 .btn-main {
@@ -60,12 +67,13 @@ textarea {
     padding: 8px 10px;
     margin-bottom: 10px;
     width: 100%;
+    background-color: light-dark(var(--neutral-1-light), var(--neutral-1-dark));
 }
 
 input::file-selector-button {
     border: none;
     background: var(--primary);
-    color: var(--text-1);
+    color: light-dark(var(--text-1-light), var(--text-1-dark));
     cursor: pointer;
     padding: 10px 20px;
 }
@@ -124,5 +132,5 @@ input::file-selector-button {
 }
 
 .header-nav a {
-    color: var(--text-1);
+    color: light-dark(var(--text-1-light), var(--text-1-dark));
 }
