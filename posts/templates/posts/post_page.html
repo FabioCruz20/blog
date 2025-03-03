@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+  Post
+{% endblock %}
+
+{% block css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/posts/posts_list.css' %}">
+{% endblock %}
+
+
+{% block content %}
+  <section class="bg-neutral-1 full-height">
+    <div class="container">
+      <article>
+        <h1 class="font-2">{{ post.title }}</h1>
+        <p class="mb-20">
+          By {{ post.author }} at {{ post.created_at }}
+        </p>
+        <p>{{ post.body }}</p>
+      </article>
+    </div>
+  </section>
+{% endblock %}

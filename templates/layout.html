@@ -14,14 +14,15 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
     {% endblock %}
 </head>
-<body>
-    <header class="bg-primary">
+<body class="bg-neutral-1">
+    <header class="bg-primary mb-20">
         <nav class="container header-nav">
             <div>
                 <img src="" alt="Logo" title="Logo">
             </div>
             <div>
                 <a href="">Home</a>
+                <a href="{% url 'posts:my_list' %}">My Posts</a>
                 <a href="{% url 'profile' %}">Profile</a>
             </div>
         </nav>
