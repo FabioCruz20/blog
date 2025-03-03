@@ -1,0 +1,43 @@
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post {
+    border: 1px solid;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.post h2 {
+    margin-bottom: 10px;
+}
+
+.post p {
+    margin-bottom: 10px;
+}
+
+.post-buttons {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.post-buttons a {
+    padding: 2px 4px;
+}
+
+.short-body {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-delete {
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 2px 4px;
+}

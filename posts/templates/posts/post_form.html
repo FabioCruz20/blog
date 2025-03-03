@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+  Post
+{% endblock %}
+
+{% block content %}
+  <section class="container">
+    <form method="post">
+      {% csrf_token %}
+      {{ form }}
+      <button class="btn-main">Save</button>        
+    </form>
+  </section>
+{% endblock %}

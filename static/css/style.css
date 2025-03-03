@@ -4,6 +4,7 @@
 
     --primary: #CC7744;
     --secondary: #655246;
+    --danger: #dd5757;
 
     --neutral-1-dark: #272320;
     --text-1-dark: #fafafa;
@@ -37,6 +38,10 @@ a {
 
 .bg-neutral-1 {
     background-color: light-dark(var(--neutral-1-light), var(--neutral-1-dark));
+}
+
+.bg-danger {
+    background-color: var(--danger);
 }
 
 .text-primary {
@@ -133,4 +138,16 @@ input::file-selector-button {
 
 .header-nav a {
     color: light-dark(var(--text-1-light), var(--text-1-dark));
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.font-2 {
+    font-size: 2rem;
 }
