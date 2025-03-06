@@ -30,7 +30,7 @@ def post_new(request):
             post = form.save(commit=False)
             post.author = request.user
             post.save()
-            return redirect('posts:list')
+            return redirect('posts:my_list')
     else:
         form = PostForm()
 
@@ -48,7 +48,7 @@ def post_edit(request, id):
             post = form.save(commit=False)
             post.author = request.user
             post.save()
-            return redirect('posts:list')
+            return redirect('posts:my_list')
     else:
         form = PostForm(instance=current_post)
 
