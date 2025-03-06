@@ -5,6 +5,22 @@
     margin-bottom: 10px;
 }
 
+.main-container {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+@media (min-width: 576px) {
+    .main-container {
+        flex-direction: row;
+    }
+}
+
+.posts-list-container {
+    flex: 1;
+}
+
 .post {
     border: 1px solid;
     padding: 10px;
