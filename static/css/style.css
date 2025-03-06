@@ -73,6 +73,7 @@ textarea {
     margin-bottom: 10px;
     width: 100%;
     background-color: light-dark(var(--neutral-1-light), var(--neutral-1-dark));
+    border: 1px solid;
 }
 
 input::file-selector-button {
@@ -81,6 +82,16 @@ input::file-selector-button {
     color: light-dark(var(--text-1-light), var(--text-1-dark));
     cursor: pointer;
     padding: 10px 20px;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 .block {

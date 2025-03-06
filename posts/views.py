@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Post
-from .forms import PostForm
+from .forms import PostForm, PostFilterForm
 from users.models import Profile
 
 # Create your views here.
@@ -9,15 +9,15 @@ from users.models import Profile
 def posts_list(request):
     """"""
 
-    posts = Post.objects.all()
-    return render(request, 'posts/posts_list.html', { 'posts': posts })
+    filter = PostFilterForm(request.GET, queryset=Post.objects.all())
+    return render(request, 'posts/posts_list.html', { 'filter': filter })
 
 
 @login_required(login_url='/accounts/login')
 def posts_user(request):
     """"""
     posts = Post.objects.filter(author=request.user)
-    return render(request, 'posts/posts_list.html', { 'posts': posts })
+    return render(request, 'posts/user_posts_list.html', { 'posts': posts })
 
 
 @login_required(login_url='/accounts/login')

@@ -2,6 +2,7 @@ asgiref==3.8.1
 Django==4.2.19
 django-appconf==1.1.0
 django-autoslug==1.9.9
+django-filter==25.1
 django-select2==8.2.3
 gunicorn==23.0.0
 packaging==24.2

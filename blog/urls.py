@@ -19,11 +19,13 @@ from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from django.conf.urls.static import static
 from django.conf import settings
+from posts import views as post_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('users.urls')),
     path('posts/', include('posts.urls')),
+    path('', post_views.posts_list, name='list'),
 ] 
 
 if settings.DEBUG:

@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+  Posts
+{% endblock %}
+
+{% block css %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/posts/posts_list.css' %}">
+{% endblock %}
+
+
+{% block content %}
+  <section class="bg-neutral-1 full-height">
+    <div class="container">
+      <div class="title-container">
+        <h1>Posts</h1>
+        <a href="{% url 'posts:new' %}" class="btn-main">New</a>
+      </div>
+      {% for post in posts %}
+      <article class="post bg-neutral-2">
+        <div>
+          <h2>{{ post.title }}</h2>
+          <p>By {{ post.author }} at {{ post.created_at }}</p>
+          <p class="short-body">{{ post.body }}</p>          
+        </div>
+        <div class="post-buttons">
+          <form action="{% url 'posts:delete' id=post.id %}">
+            {% csrf_token %}
+            <button class="btn-delete bg-danger">Delete</button>
+          </form>
+          <a href="{% url 'posts:edit' id=post.id %}">Edit</a>
+          <a href="{% url 'posts:page' id=post.id %}">View</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}
